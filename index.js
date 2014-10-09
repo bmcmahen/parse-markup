@@ -43,7 +43,6 @@ module.exports = function (el, whitelist, attr) {
     if (attr) {
       for (var i = 0; i < attr.length; i++) {
         var a = attr[i];
-        console.log('get property', a);
         var property = node.getAttribute(a);
         if (property) {
           instance.attr[a] = property;

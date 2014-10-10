@@ -21,10 +21,13 @@ module.exports = function (el, whitelist, attr) {
 
   function parse(node) {
     if (!node) return;
-    if (node.parentNode == prev) return;
     if (node.tagName == 'BR') return;
 
     var len = node.textContent.length;
+
+    if (node.parentNode != el) {
+      length -= len;
+    }
 
     // if our node is a text node, or it doesn't pass our whitelist
     // then record length and break.

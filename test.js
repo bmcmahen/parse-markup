@@ -26,4 +26,13 @@ describe('parseMarkup', function () {
     expect(markup[0].attr).to.have.property('href', 'http://someurl');
   });
 
+  it('should handle embedded markup', function () {
+    var el = document.createElement('div');
+    el.innerHTML = '<i>this is <b>italic and bold</b></i><b>. this is bold</b>';
+    var markup = parse(el);
+    expect(markup).to.have.length(3);
+    expect(markup[0]).to.eql({ from: 0, to : 23, type: 'I', attr: {}});
+    expect(markup[1]).to.eql({ from: 8, to: 23, type: 'B', attr: {}});
+  });
+
 });

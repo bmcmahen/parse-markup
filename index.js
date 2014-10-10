@@ -23,16 +23,13 @@ module.exports = function (el, whitelist, attr) {
     if (!node) return;
     if (node.tagName == 'BR') return;
 
+    var children = node.children;
     var len = node.textContent.length;
-
-    if (node.parentNode != el) {
-      length -= len;
-    }
 
     // if our node is a text node, or it doesn't pass our whitelist
     // then record length and break.
     if (!node.tagName || (whitelist && !~whitelist.indexOf(node.tagName))) {
-      length += len;
+      if (!children) length += len;
       return;
     }
 
@@ -53,7 +50,7 @@ module.exports = function (el, whitelist, attr) {
       }
     }
 
-    length += len;
+    if (!children) length += len;
     markup.push(instance);
   }
 

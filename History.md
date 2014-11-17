@@ -6,3 +6,6 @@
 
 ## 0.0.4
 - * fix off-by-one errors
+
+## 1.0.0
+- * add package.json

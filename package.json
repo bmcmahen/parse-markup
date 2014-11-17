@@ -1,0 +1,26 @@
+{
+  "name": "bmcmahen-parse-markup",
+  "version": "1.0.0",
+  "description": "parse markup tags inside of an element, returning indexes, tagName, and specified attributes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bmcmahen/parse-markup.git"
+  },
+  "keywords": [
+    "markup",
+    "parse"
+  ],
+  "author": "Ben McMahen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bmcmahen/parse-markup/issues"
+  },
+  "homepage": "https://github.com/bmcmahen/parse-markup",
+  "dependencies": {
+    "dom-iterator": "^0.3.0"
+  }
+}

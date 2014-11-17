@@ -5,7 +5,7 @@
 
 ## Installation
 
-  Install with [Duo](http://duojs.org):
+  Install with [Duo](http://duojs.org) or NPM:
 
 ```javascript
 var parse = require('bmcmahen/parse-markup');
@@ -13,6 +13,8 @@ var el = document.createElement('div');
 el.innerHTML = '<b>bold</b> and <i>italic</i>';
 var markup = parse(el, ['B', 'I']);
 ```
+
+  $ npm install bmcmahen-parse-markup
 
 ## License
 

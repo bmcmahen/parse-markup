@@ -2,7 +2,7 @@
  * Module dependencies
  */
 
-var iterator = require('matthewmueller/dom-iterator');
+var iterator = require('dom-iterator');
 
 /**
  * Parse the markup of an element
@@ -20,7 +20,6 @@ module.exports = function (el, whitelist, attr) {
   var markup = [];
 
   function parse(node) {
-    if (!node) return;
     if (node.tagName == 'BR') return;
 
     var children = node.children;
